@@ -1,0 +1,18 @@
+doctype html
+html
+  head 
+    title Virksomheds ansatte
+    script(src='/index.js')
+    link(rel="stylesheet" href="/styles.css")
+  body 
+    h1 Virksomheds ansatte
+    table 
+      thead
+        tr
+          th Navn
+          th Stilling
+      tbody
+        each ansat in ansatte
+          tr
+            td(class='ansat' data=ansat.name) #{ansat.name}
+            td(class='job' data=ansat.job) #{ansat.job}

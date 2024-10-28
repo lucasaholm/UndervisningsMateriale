@@ -1,0 +1,41 @@
+mixin comment(commentData)
+  .comment
+    if commentData.postedByAdmin
+      em (Posted by Admin)
+    .date= commentData.date 
+    .author= commentData.author
+    .text=commentData.text
+
+doctype html 
+html 
+  head
+    link(rel="stylesheet" href="style.css")
+    title Mixins in Pug
+    style. 
+      .comment {
+        font-family: sans-serif;
+        line-height: 1.5;
+        padding: 10px;
+        border: 5px solid black; 
+        width: 550px;
+        background-color: lightgrey;
+        color: black;
+        margin-bottom: 20px;
+      }
+
+      .date { font-size: 45%; text-align: right;}
+      .author { font-size: 110%; font-weight: bold;}
+      .text {font-size: 80%;}
+  body 
+    //.comment 
+      .date 25-09-1998
+      .author LukeKING 
+      .text Hey king, you dropped this 👑
+      */
+    //koden nedenfor er til at lave vores mixin.
+    - const user1 = {postedByAdmin: true, date: '25-09-1998', author: 'LukeKING', text: 'Hey king, you dropped this 👑'}
+    +comment(user1)
+    - const user2 = {date: '????????', author: 'Aatrox', text: 'WORLD ENDER'}
+    +comment(user2)
+
+      

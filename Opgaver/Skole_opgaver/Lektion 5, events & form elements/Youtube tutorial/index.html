@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="submit" value=register>
+    </form>
+    <script>
+        var form = document.getElementById("form");
+
+        form.addEventListener("submit", function(e){
+           event.preventDefault(); //prevents the form from auto submitting
+                var username = document.getElementById("username").value 
+                console.log(username)
+                var email = document.getElementById("email").value   
+                console.log(email)
+            })
+    </script>
+</body>
+</html>

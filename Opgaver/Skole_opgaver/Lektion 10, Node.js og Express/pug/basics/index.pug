@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Eksempel på Pug Skabelon
+    link(rel='stylesheet', href='styles.css')
+  body
+    h1 Min Tabel
+    table
+      thead
+        tr
+          th Navn
+          th Alder
+          th Job
+      tbody
+        each person in people
+          tr
+            td= person.name
+            td= person.age
+            td= person.job
+    
+
+            

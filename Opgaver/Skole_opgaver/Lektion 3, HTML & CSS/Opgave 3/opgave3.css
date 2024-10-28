@@ -1,0 +1,28 @@
+table {
+	border-collapse: collapse;
+	vertical-align: middle;
+	width:100%;
+}
+
+td {
+	border: 2px solid blue;	
+	width: auto;
+	text-align: center;
+}
+
+img {width: 110px;
+max-width: 100%;
+height: auto;}
+
+.grid {
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+
+    }
+}

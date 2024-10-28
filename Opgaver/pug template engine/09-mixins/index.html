@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html> 
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Mixins in Pug</title>
+    <style>
+      .comment {
+        font-family: sans-serif;
+        line-height: 1.5;
+        padding: 10px;
+        border: 5px solid black; 
+        width: 550px;
+        background-color: lightgrey;
+        color: black;
+        margin-bottom: 20px;
+      }
+      
+      .date { font-size: 45%; text-align: right;}
+      .author { font-size: 110%; font-weight: bold;}
+      .text {font-size: 80%;}
+    </style>
+  </head>
+  <body> 
+    <!--.comment 
+    .date 25-09-1998
+    .author LukeKING 
+    .text Hey king, you dropped this 👑
+    */
+    -->
+    <!--koden nedenfor er til at lave vores mixin.-->
+    <div class="comment"><em>(Posted by Admin)</em>
+      <div class="date">25-09-1998</div>
+      <div class="author">LukeKING</div>
+      <div class="text">Hey king, you dropped this 👑</div>
+    </div>
+    <div class="comment">
+      <div class="date">????????</div>
+      <div class="author">Aatrox</div>
+      <div class="text">WORLD ENDER</div>
+    </div>
+  </body>
+</html>
